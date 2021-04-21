@@ -1,6 +1,6 @@
 #include "Fraction.h"
-Fraction :: Fraction(const int x,const int y) : numerator(x / f_(x, y)), denominator(y / f_(x, y)) {};
-int Fraction::f_(int x,int y)
+Fraction::Fraction(const int x, const int y) : numerator(x / f_(x, y)), denominator(y / f_(x, y)) {};
+int Fraction::f_(int x, int y)
 {
 	x = abs(x);
 	y = abs(y);
@@ -44,7 +44,8 @@ Fraction Fraction :: operator / (Fraction f)
 	Fraction c(this->numerator * f.denominator, this->denominator * f.numerator);
 	return c;
 }
-void Fraction :: print()
+void Fraction::print()
 {
-	cout << this->numerator << " / " << this->denominator << endl;
+	if (this->numerator % this->denominator == 0) cout << this->numerator << endl;
+	else cout << this->numerator << " / " << this->denominator << endl;
 }
