@@ -46,6 +46,6 @@ Fraction Fraction :: operator / (Fraction f)
 }
 void Fraction::print()
 {
-	if (this->numerator % this->denominator == 0) cout << this->numerator / this->denomknator << endl;
+	if (this->numerator % this->denominator == 0) cout << this->numerator / this->denominator << endl;
 	else cout << abs(this->numerator * this->denominator) / abs(this->denominator) << " / " << this->numerator * this->denominator / abs(this->numerator) << endl;
 }
